@@ -20,6 +20,9 @@ public class Ingredient {
     @ManyToOne
     private Recipe recipe;
 
+    @OneToOne
+    private MeasurementUnit measurementUnit;
+
     public Long getId() {
         return id;
     }
@@ -50,5 +53,13 @@ public class Ingredient {
 
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
+    }
+
+    public MeasurementUnit getMeasurementUnit() {
+        return measurementUnit;
+    }
+
+    public void setMeasurementUnit(MeasurementUnit measurementUnit) {
+        this.measurementUnit = measurementUnit;
     }
 }
